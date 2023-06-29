@@ -14,5 +14,5 @@ const tareaSchema = new Schema({
 }
 })
 
-const Tarea = model("tarea",tareaSchema)
+const Tarea = model("Tarea",tareaSchema)
 export default Tarea
