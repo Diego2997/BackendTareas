@@ -10,6 +10,8 @@ export const obtenerTareas = async(req,res) =>{
 }
 
 export const crearTarea = async(req,res) =>{
+   const {nombreTarea} = req.body
+   console.log(nombreTarea)
     try {
     const nuevaTarea = new Tarea(req.body)
     await nuevaTarea.save()

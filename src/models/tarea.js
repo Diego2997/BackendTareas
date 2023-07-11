@@ -7,11 +7,11 @@ const tareaSchema = new Schema({
     minLength:2,
     maxLength:100,
     unique:true
-    },
-    completada:{
-    type:Boolean,
-    default:true
-}
+    }
+})
+
+tareaSchema.pre("find",()=>{
+    console.log("hola desde el middleware de mongoose")
 })
 
 const Tarea = model("Tarea",tareaSchema)
